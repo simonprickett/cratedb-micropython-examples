@@ -1,6 +1,6 @@
 import envvars
 import json
-import microcrate
+import cratedb
 import network
 import time
 
@@ -18,7 +18,7 @@ TEMPERATURE_OFFSET = 3
 UPDATE_INTERVAL = 30  # how often to send data, in seconds.
 
 # Set up CrateDB.
-crate = microcrate.CrateDB(
+crate = cratedb.CrateDB(
     host=envvars.CRATEDB_HOST,
     user=envvars.CRATEDB_USER,
     password=envvars.CRATEDB_PASSWORD
