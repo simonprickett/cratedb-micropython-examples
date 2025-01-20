@@ -1,7 +1,7 @@
 from gfx_pack import SWITCH_E
 
 import gfx
-import microcrate
+import cratedb
 import time
 
 import envvars
@@ -15,7 +15,7 @@ def refresh_crate_display():
     display.update()
     
     # Set up CrateDB.
-    crate = microcrate.CrateDB(
+    crate = cratedb.CrateDB(
         host=envvars.CRATEDB_HOST,
         user=envvars.CRATEDB_USER,
         password=envvars.CRATEDB_PASSWORD
