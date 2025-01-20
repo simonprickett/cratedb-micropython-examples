@@ -1,7 +1,7 @@
 import json
 import network
 import time
-import microcrate
+import cratedb
 from machine import ADC
 
 import envvars
@@ -13,7 +13,7 @@ sound_sensor = ADC(0)
 light_sensor = ADC(1)
 
 # Set up CrateDB.
-crate = microcrate.CrateDB(
+crate = cratedb.CrateDB(
     host=envvars.CRATEDB_HOST,
     user=envvars.CRATEDB_USER,
     password=envvars.CRATEDB_PASSWORD
